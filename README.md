@@ -4,7 +4,7 @@ PvZ Fusion Helper is a **Melon Mod Suite**. Addons that will help you play the F
 # Installation
 
 - Install [MelonLoader](https://melonwiki.xyz/#/modders/quickstart).
-- [Download](https://discord.gg/FTfz45NGxh) the mods from our server and just put what you want to the `Mods` folder in your game's installation directory.
+- [Download](https://discord.gg/DPAC5ZVJ8T) the mods from our server and just put what you want to the `Mods` folder in your game's installation directory.
 
 # List of Addons
 

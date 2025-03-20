@@ -2,7 +2,7 @@
 using MelonLoader;
 using UnityEngine;
 
-[assembly: MelonInfo(typeof(Better_Pumpkin_Fusion.Core), "Better Pumpkin Fusion", "221.0.0", "dynaslash & TuanAnh2901", null)]
+[assembly: MelonInfo(typeof(Better_Pumpkin_Fusion.Core), "Better Pumpkin Fusion", "231.0.0", "dynaslash & TuanAnh2901", null)]
 [assembly: MelonGame("LanPiaoPiao", "PlantsVsZombiesRH")]
 
 namespace Better_Pumpkin_Fusion
@@ -11,11 +11,13 @@ namespace Better_Pumpkin_Fusion
     {
         private Dictionary<int, int> plantMixDictionary = new Dictionary<int, int>
         {
-            { 20, 1087 },
-            { 21, 1088 },
-            { 22, 1091 },
-            { 23, 1089 },
-            { 25, 1092 }
+            { 20, 1087 }, // Plantern
+            { 21, 1088 }, // Cactus
+            { 22, 1091 }, // Blover
+            { 23, 1089 }, // Starfruit
+            { 25, 1092 }, // Magnet-shroom
+            { 2, 1164 }, // Cherry Bomb
+            { 4, 1190 }, // Potato Mine
         };
 
         public override void OnInitializeMelon()
@@ -69,6 +71,8 @@ namespace Better_Pumpkin_Fusion
                 return 922;
             else if ((int)plant.thePlantType == 922 && plantTypeOnMouse == 21)
                 return 911;
+            else if ((int)plant.thePlantType == 1092 && plantTypeOnMouse == 25)
+                return 935;
 
             return 0;
         }

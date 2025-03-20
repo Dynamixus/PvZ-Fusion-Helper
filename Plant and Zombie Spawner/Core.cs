@@ -10,8 +10,8 @@ namespace Plant_and_Zombie_Spawner
     public class Core : MelonMod
     {
         private static MelonPreferences_Entry<bool> configMindControl;
-        public MelonPreferences_Entry<KeyCode> plantKeybind;
-        public MelonPreferences_Entry<KeyCode> zombieKeybind;
+        public static MelonPreferences_Entry<KeyCode> plantKeybind;
+        public static MelonPreferences_Entry<KeyCode> zombieKeybind;
 
         public override void OnInitializeMelon()
         {

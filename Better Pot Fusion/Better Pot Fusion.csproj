@@ -12,7 +12,8 @@
 		<AssemblyName>Better_Pot_Fusion</AssemblyName>
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<GamePath>D:\Games\[Series] PvZ Mods\(Fangame) Fusion\(Latest - Solo)\Game Files</GamePath>
+		<GamePath>D:\Games\[Series] PvZ Mods\(Fangame) Fusion\Plants vs Zombies Fusion - Version 2.3.1 (Chinese)[PC]</GamePath>
+		<Platforms>AnyCPU;x64</Platforms>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -100,12 +101,6 @@
 		<Reference Include="UnityEngine.ClothModule">
 			<HintPath>$(GamePath)\MelonLoader\Il2CppAssemblies\UnityEngine.ClothModule.dll</HintPath>
 		</Reference>
-		<Reference Include="UnityEngine.ClusterInputModule">
-			<HintPath>$(GamePath)\MelonLoader\Il2CppAssemblies\UnityEngine.ClusterInputModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.ClusterRendererModule">
-			<HintPath>$(GamePath)\MelonLoader\Il2CppAssemblies\UnityEngine.ClusterRendererModule.dll</HintPath>
-		</Reference>
 		<Reference Include="UnityEngine.ContentLoadModule">
 			<HintPath>$(GamePath)\MelonLoader\Il2CppAssemblies\UnityEngine.ContentLoadModule.dll</HintPath>
 		</Reference>
@@ -153,9 +148,6 @@
 		</Reference>
 		<Reference Include="UnityEngine.LocalizationModule">
 			<HintPath>$(GamePath)\MelonLoader\Il2CppAssemblies\UnityEngine.LocalizationModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.NVIDIAModule">
-			<HintPath>$(GamePath)\MelonLoader\Il2CppAssemblies\UnityEngine.NVIDIAModule.dll</HintPath>
 		</Reference>
 		<Reference Include="UnityEngine.ParticleSystemModule">
 			<HintPath>$(GamePath)\MelonLoader\Il2CppAssemblies\UnityEngine.ParticleSystemModule.dll</HintPath>
@@ -270,9 +262,6 @@
 		</Reference>
 		<Reference Include="UnityEngine.VideoModule">
 			<HintPath>$(GamePath)\MelonLoader\Il2CppAssemblies\UnityEngine.VideoModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.VirtualTexturingModule">
-			<HintPath>$(GamePath)\MelonLoader\Il2CppAssemblies\UnityEngine.VirtualTexturingModule.dll</HintPath>
 		</Reference>
 		<Reference Include="UnityEngine.VRModule">
 			<HintPath>$(GamePath)\MelonLoader\Il2CppAssemblies\UnityEngine.VRModule.dll</HintPath>

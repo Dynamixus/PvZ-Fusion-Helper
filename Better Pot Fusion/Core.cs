@@ -2,7 +2,7 @@
 using MelonLoader;
 using UnityEngine;
 
-[assembly: MelonInfo(typeof(Better_Pot_Fusion.Core), "Better Pot Fusion", "221.0.0", "dynaslash & TuanAnh2901", null)]
+[assembly: MelonInfo(typeof(Better_Pot_Fusion.Core), "Better Pot Fusion", "231.0.0", "dynaslash & TuanAnh2901", null)]
 [assembly: MelonGame("LanPiaoPiao", "PlantsVsZombiesRH")]
 
 namespace Better_Pot_Fusion
@@ -18,6 +18,7 @@ namespace Better_Pot_Fusion
 			{ 30, 1133}, // Umbrella
 			{ 31, 1136}, // Marigold
 			{ 32, 1125}, // Melon
+            { 1, 1184 }, // Sunflower
 		};
 
         public override void OnInitializeMelon()
@@ -63,6 +64,8 @@ namespace Better_Pot_Fusion
             {
                 return GetMixData(plantTypeOnMouse);
             }
+            else if ((int)plant.thePlantType == 1137 && plantTypeOnMouse == 1)
+                return 936;
 
             return 0;
         }

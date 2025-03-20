@@ -42,13 +42,13 @@ namespace Better_Game_Speed
 					if (Input.GetKeyDown(configIncrease.Value) && configSpeed.Value < 3f)
 					{
 						configSpeed.Value += 0.5f;
-						MelonPreferences.Save();
+						// MelonPreferences.Save();
 						UpdateGameSpeed();
 					}
 					if (Input.GetKeyDown(configDecrease.Value) && configSpeed.Value > 1f)
 					{
 						configSpeed.Value -= 0.5f;
-						MelonPreferences.Save();
+						// MelonPreferences.Save();
 						UpdateGameSpeed();
 					}
 				}
@@ -56,7 +56,7 @@ namespace Better_Game_Speed
 				if (Input.GetKeyDown(configPauseKey.Value))
 				{
 					configPause.Value = !configPause.Value;
-					MelonPreferences.Save();
+					// MelonPreferences.Save();
 					UpdateGameSpeed();
 				}
 			}
@@ -67,12 +67,12 @@ namespace Better_Game_Speed
 				if (configSpeed.Value < 1f && configSpeed.Value > 0f)
 				{
 					configSpeed.Value = 1f;
-					MelonPreferences.Save();
+					// MelonPreferences.Save();
 				}
 				if (configSpeed.Value > 3f)
 				{
 					configSpeed.Value = 3f;
-					MelonPreferences.Save();
+					// MelonPreferences.Save();
 				}
 			}
 		}

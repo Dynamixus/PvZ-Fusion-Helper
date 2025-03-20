@@ -73,7 +73,7 @@ namespace Utilities
                     __instance.newZombieWaveCountDown = 15f;
                 }
 
-                if (Input.GetKeyDown(KeyCode.Quote))
+                if (Input.GetKeyDown(Core.scaredyDreamKeybind.Value))
                 {
                     Core.isScaredyDream = !Core.isScaredyDream;
                     Board.BoardTag boardTag = Board.Instance.boardTag;
@@ -81,7 +81,7 @@ namespace Utilities
                     Board.Instance.boardTag = boardTag;
                 }
 
-                if (Input.GetKeyDown(KeyCode.Backslash))
+                if (Input.GetKeyDown(Core.seedRainKeybind.Value))
                 {
                     Core.isSeedRain = !Core.isSeedRain;
                     Board.BoardTag boardTag = Board.Instance.boardTag;
@@ -213,7 +213,7 @@ namespace Utilities
             [HarmonyPatch("Update")]
             private static void Update(Plant __instance)
             {
-                if (Input.GetKeyDown(KeyCode.KeypadPlus))
+                if (Input.GetKeyDown(Core.killAllPlantsKeybind.Value))
                 {
                     __instance.Die(0);
                 }
@@ -255,58 +255,58 @@ namespace Utilities
 
             private static void Generate()
             {
-                if (Input.GetKeyDown(KeyCode.Keypad0))
+                if (Input.GetKeyDown(Core.generateTrophyKeybind.Value))
                 {
                     Utility.SpawnItem("Board/Award/TrophyPrefab");
                 }
 
-                if (Input.GetKeyDown(KeyCode.Keypad1))
+                if (Input.GetKeyDown(Core.generateFertilizerKeybind.Value))
                 {
                     Utility.SpawnItem("Items/fertilize/Ferilize");
                 }
 
-                if (Input.GetKeyDown(KeyCode.Keypad2))
+                if (Input.GetKeyDown(Core.generateBucketKeybind.Value))
                 {
                     Utility.SpawnItem("Items/Bucket");
                 }
 
-                if (Input.GetKeyDown(KeyCode.Keypad3))
+                if (Input.GetKeyDown(Core.generateHelmetKeybind.Value))
                 {
                     Utility.SpawnItem("Items/Helmet");
                 }
 
-                if (Input.GetKeyDown(KeyCode.Keypad4))
+                if (Input.GetKeyDown(Core.generateJackKeybind.Value))
                 {
                     Utility.SpawnItem("Items/JackBox");
                 }
 
-                if (Input.GetKeyDown(KeyCode.Keypad5))
+                if (Input.GetKeyDown(Core.generatePickaxeKeybind.Value))
                 {
                     Utility.SpawnItem("Items/Pickaxe");
                 }
 
-                if (Input.GetKeyDown(KeyCode.Keypad6))
+                if (Input.GetKeyDown(Core.generateMechaKeybind.Value))
                 {
                     Utility.SpawnItem("Items/Machine");
                 }
 
-                if (Input.GetKeyDown(KeyCode.Keypad7))
+                if (Input.GetKeyDown(Core.generateSuperMechaKeybind.Value))
                 {
                     Utility.SpawnItem("Items/SuperMachine");
                 }
 
 
-                if (Input.GetKeyDown(KeyCode.Keypad8))
+                if (Input.GetKeyDown(Core.generateMeteorKeybind.Value))
                 {
                     Board.Instance.CreateUltimateMateorite();
                 }
 
-                if (Input.GetKeyDown(KeyCode.Keypad9))
+                if (Input.GetKeyDown(Core.generateSproutKeybind.Value))
                 {
                     Utility.SpawnItem("Items/SproutPotPrize/SproutPotPrize");
                 }
 
-                if (Input.GetKeyDown(KeyCode.KeypadMultiply))
+                if (Input.GetKeyDown(Core.charmAllKeybind.Value))
                 {
                     foreach (Zombie zombie in Board.Instance.zombieArray)
                     {
@@ -317,7 +317,7 @@ namespace Utilities
                     }
                 }
 
-                if (Input.GetKeyDown(KeyCode.KeypadMinus))
+                if (Input.GetKeyDown(Core.killAllZombiesKeybind.Value))
                 {
                     foreach (Zombie zombie in Board.Instance.zombieArray)
                     {

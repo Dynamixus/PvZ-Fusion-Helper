@@ -113,20 +113,22 @@ namespace Odyssey_Buffs
 					MelonLogger.Msg($"Ultimate Upgrade {Core.instance.boolArrayultimateConfig[i].DisplayName} = {Core.instance.boolArrayultimateConfig[i].Value} applied.");
 				}
 				MelonLogger.Msg("Ultimate upgrades loaded!");
-
-				MelonLogger.Msg("");
-				MelonLogger.Msg("Loading debuffs...");
-				for (int i = 0; i < travelMgr.debuff.Count; i++)
+				
+				if (Core.instance.configEnableDebuffs.Value)
 				{
-					if (Core.debuffsKeys[i].StartsWith("Skip_"))
+					MelonLogger.Msg("");
+					MelonLogger.Msg("Loading debuffs...");
+					for (int i = 0; i < travelMgr.debuff.Count; i++)
 					{
-						travelMgr.debuff[i] = false;
-						continue;
+						if (Core.debuffsKeys[i].StartsWith("Skip_"))
+						{
+							travelMgr.debuff[i] = false;
+							continue;
+						}
+						travelMgr.debuff[i] = Core.instance.boolArraydebuffsConfig[i].Value;
+						MelonLogger.Msg($"Debuff {Core.instance.boolArraydebuffsConfig[i].DisplayName} = {Core.instance.boolArraydebuffsConfig[i].Value} applied.");
 					}
-					travelMgr.debuff[i] = Core.instance.boolArraydebuffsConfig[i].Value;
-					MelonLogger.Msg($"Debuff {Core.instance.boolArraydebuffsConfig[i].DisplayName} = {Core.instance.boolArraydebuffsConfig[i].Value} applied.");
 				}
-
 			}
 		}
 	}

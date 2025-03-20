@@ -33,8 +33,8 @@ namespace Odyssey_Buffs
 			"RerollPlus2", "EnflamedDMGMultiplier",
 			"GloveNoCooldown",
 			"GatlingIcicle_Buff1", "GatlingIcicle_Buff2",
-			"MeteorHalfCooldown", "LumosMaxLevel",
-			"LaserPumpkin_Buff1", "LaserPumpkin_Buff2",
+			"MeteorHalfCooldown", "Lumos4Levels",
+			"RadiantPot_Buff1", "RadiantPot_Buff2",
 			"MidasUmbrella_Buff1", "MidasUmbrella_Buff2",
 			"Gain3000SunAndDoubled", "Mallet6SecCooldown",
 			"PlantHalfRecharge",
@@ -42,8 +42,13 @@ namespace Odyssey_Buffs
 			"CharmedZombiesIncreasedDMG", "Phoenix_INFPierce",
 			"ImitaterReducedRecharge", "IdenticalPlantDMGIncrease",
 			"MagicCat_Buff1","MagicCat_Buff2",
+			"TrueCherry", "TrueDoom",
 			"CalamityShroom_Buff1","CalamityShroom_Buff2",
-			"CherryAndObsidianBuff"
+			"CherryAndObsidianBuff",
+			"TycoonTorch_Buff1", "TycoonTorch_Buff2",
+			"ZombieIncreasedDelayDamage", "ColumnPlanting",
+			"MagnetarAndHeliosBuff",
+			"TeslaUmbrella_Buff1", "TeslaUmbrella_Buff2",
 		};
 
 		public static string[] ultimateUpgradesKeys = new string[]
@@ -59,6 +64,8 @@ namespace Odyssey_Buffs
 			"ObsidianTall_Buff1", "ObsidianTall_Buff2",
 			"Charmatron_Buff1", "Charmatron_Buff2",
 			"TitanApeacalypse_Buff1","TitanApeacalypse_Buff2",
+			"Helios_Buff1", "Helios_Buff2",
+			"LaserPumpkin_Buff1", "LaserPumpkin_Buff2",
 		};
 
 		public static string[] debuffsKeys = new string[]
@@ -75,10 +82,12 @@ namespace Odyssey_Buffs
 			"Skip_LoseHalfPlants", "Skip_DivideSun10", 
 			"DoubleZombieHealth", "IncreaseMax100Zombies",
 			"MichaelZomboni_Debuff1", "MichaelZomboni_Debuff2",
-			"Abyssal_SpawnZomboss", "Abyssal_SpawnPozeidon",
-			"Abyssal_SpawnUltraMecha", "Abyssal_GigaRugbyStriker",
-			"Abyssal_SpawnSkystrider", "Abyssal_SpawnJacksonWorldwide",
-			"Abyssal_SpawnCherryZ",
+			"SpawnNext_SpawnZomboss", "SpawnNext_SpawnPozeidon",
+			"SpawnNext_SpawnUltraMecha", "SpawnNext_GigaRugbyStriker",
+			"SpawnNext_SpawnSkystrider", "SpawnNext_SpawnJacksonWorldwide",
+			"SpawnNext_SpawnCherryZ",
+			"BungeeJumpers_Debuff",
+			"SpawnNext_QueenJill"
 		};
 
 		public override void OnInitializeMelon()
@@ -102,7 +111,7 @@ namespace Odyssey_Buffs
 			// Initialize each configuration entry with a default value if it doesn’t already exist
 			configEnablePlant = mainCategory.CreateEntry("Enable Odyssey Plants", true);
 			configEnableEntries = mainCategory.CreateEntry("Enable Odyssey Buffs", true);
-			configEnableDebuffs = debuffsCategory.CreateEntry("Enable Odyssey Debuffs", true);
+			configEnableDebuffs = mainCategory.CreateEntry("Enable Odyssey Debuffs", true);
 			configEnableTravel = coverageCategory.CreateEntry("Override Odyssey", true);
 			configEnableIZ = coverageCategory.CreateEntry("Enable in Other Modes", true);
 
